@@ -30,7 +30,7 @@ const Feed = () => {
         >
           New <span style={{ color: '#fc1503' }}>videos</span>
         </Typography>
-        <Videos />
+        <Videos videos={[]} />
       </Box>
     </Stack>
   );
