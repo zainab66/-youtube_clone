@@ -19,10 +19,25 @@ export default function Sidebar() {
           className="category-btn"
           style={{
             background: catagory.name === selectedCategory && '#Fc1503',
+            color: 'white',
           }}
+          key={catagory.name}
         >
-          <span>{catagory.icon}</span>
-          <span>{catagory.name}</span>
+          <span
+            style={{
+              color: catagory.name === selectedCategory ? 'white' : 'red',
+              marginRight: '15px',
+            }}
+          >
+            {catagory.icon}
+          </span>
+          <span
+            style={{
+              opacity: catagory.name === selectedCategory ? '1' : '0.8',
+            }}
+          >
+            {catagory.name}
+          </span>
         </button>
       ))}
     </Stack>
