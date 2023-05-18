@@ -10,6 +10,12 @@ export default function ChannelCard({ channelDetail }) {
       sx={{
         boxShadow: 'none',
         borderRadius: '20px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: { xs: '356px', md: '320px' },
+        height: '326px',
+        margin: 'auto',
       }}
     >
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
@@ -37,9 +43,17 @@ export default function ChannelCard({ channelDetail }) {
             }}
           />
           <Typography variant="h6">
-            {channelDetail?.snipper?.title}
+            {channelDetail?.snippet?.title}{' '}
             <CheckCircle sx={{ fontSize: '14px', color: 'gray', ml: '5px' }} />
           </Typography>
+          {channelDetail?.statistics?.subscriberCount && (
+            <Typography>
+              {parseInt(
+                channelDetail?.statistics?.subscriberCount
+              ).toLocaleString()}{' '}
+              Subscribers
+            </Typography>
+          )}
         </CardContent>
       </Link>
     </Box>
