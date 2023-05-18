@@ -3,12 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { Paper, IconButton } from '@mui/material';
 import { Search } from '@mui/icons-material';
 
-export default function SearchBar(e) {
+export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     if (searchTerm) {
       navigate(`/search/${searchTerm}`);
 
