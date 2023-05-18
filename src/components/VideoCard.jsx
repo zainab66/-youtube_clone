@@ -10,6 +10,21 @@ import {
   demoChannelTitle,
 } from '../utils/constants';
 
-export default function VideoCard({ video }) {
-  return <div>VideoCard</div>;
+export default function VideoCard({
+  video: {
+    id: { videoId },
+    snippet,
+  },
+}) {
+  return (
+    <Card>
+      <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
+        <CardMedia
+          image={snippet?.thumbnails?.high?.url}
+          alt={snippet?.title}
+          sx={{ width: 358, height: 180 }}
+        />
+      </Link>
+    </Card>
+  );
 }
