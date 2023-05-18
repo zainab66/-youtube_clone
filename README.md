@@ -9,6 +9,10 @@ The app is fully mobile and tablet responsive.
 It was built in React with Axios calls to RapidAPI YouTube API.
 I utilized the JSMastery tutorial to learn more about API calls, useState, useEffect and other key React features.
 
+The admin-dashboard has been deployed on Render.com can be viewed here:
+
+https://wfmedia.onrender.com/
+
 ## Tech Stack
 
 - React
